@@ -27,6 +27,8 @@ namespace FixedHeader
 
         private void OnBearImageSizeChanged(object sender, System.EventArgs e)
         {
+            BearImage.SizeChanged -= OnBearImageSizeChanged;
+
             //When the bear image has been loaded, reposition the news header to the bottom of this image
             TitleText.Margin = new Thickness(0, BearImage.Height - 40, 0, 0);
         }
